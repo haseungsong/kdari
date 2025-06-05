@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Dari Home</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('./assets/korea_background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #f44336;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bem-vindo ao K-Dari!</h2>
+    <p>Usuário conectado: <strong id="userEmail">Carregando...</strong></p>
+    <button id="logoutBtn">Sair</button>
+  </div>
+
+  <script type="module">
+    import { auth } from './assets/firebase.js';
+    import {
+      onAuthStateChanged,
+      signOut
+    } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+
+    onAuthStateChanged(auth, user => {
+      if (user) {
+        document.getElementById("userEmail").textContent = user.email;
+      } else {
+        location.href = "index.html";
+      }
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      signOut(auth).then(() => {
+        location.href = "index.html";
+      });
+    });
+  </script>
+</body>
+</html>

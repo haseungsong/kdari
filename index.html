@@ -34,29 +34,39 @@
       margin-bottom: 24px;
     }
 
-    input, select {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 16px;
-      box-sizing: border-box;
+    input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
     }
 
-    input:focus, select:focus {
+    input:focus {
       outline: none;
       border-color: #2196f3;
       box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
     }
 
-    label {
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-      color: #555;
+
+    .checkbox-row {
+    display: flex;
+    justify-content: flex-end;         /* 양쪽 끝 정렬 대신 오른른쪽 정렬 */
+    align-items: center;
+    gap: 8px;                        /* 텍스트와 체크박스 사이 적절한 거리 */
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #555;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2196f3;
+    cursor: pointer;
+    margin: 0;
     }
 
     button {
@@ -99,12 +109,13 @@
     <input id="email" type="email" placeholder="E-mail" />
     <input id="password" type="password" placeholder="Senha" />
 
-    <label>
-      <input type="checkbox" id="autoLogin" />
-      Save login
-    </label>
+    <div class="checkbox-row">
+    <span>Save</span>
+    <input type="checkbox" id="autoLogin" />
+    </div>
 
     <button onclick="login()">Entrar</button>
+
     <p><a href="signup.html">Cadastrar</a></p>
     <p><a href="#">Esqueceu sua senha?</a></p>
   </div>
@@ -116,6 +127,7 @@
     const passwordInput = document.getElementById('password');
     const autoLoginCheckbox = document.getElementById('autoLogin');
 
+    // 자동 로그인 적용
     if (localStorage.getItem("savedEmail")) {
       emailInput.value = localStorage.getItem("savedEmail");
       passwordInput.value = localStorage.getItem("savedPassword");
@@ -123,10 +135,15 @@
     }
 
     window.login = async function () {
-      try {
-        const email = emailInput.value.trim();
-        const password = passwordInput.value;
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
 
+      if (!email || !password) {
+        alert("⚠️ 이메일과 비밀번호를 모두 입력해주세요.");
+        return;
+      }
+
+      try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
         if (autoLoginCheckbox.checked) {
@@ -137,10 +154,10 @@
           localStorage.removeItem("savedPassword");
         }
 
-        alert("\u2705 Login realizado com sucesso!");
-        location.href = "index.html";
+        alert("✅ Login realizado com sucesso!");
+        location.href = "home.html";  // 로그인 성공 시 이동할 페이지
       } catch (error) {
-        alert("\u274C Erro no login: " + error.message);
+        alert("❌ Erro no login: " + error.message);
       }
     };
   </script>

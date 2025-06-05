@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Dari Cadastro</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('./assets/korea_background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .radio-group label {
+      font-size: 14px;
+      color: #444;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #2196f3;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
+
+    a {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #1976d2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cadastro K-Dari</h2>
+
+    <input id="nome" type="text" placeholder="Nome completo" />
+    <input id="email" type="email" placeholder="E-mail" />
+    <input id="senha" type="password" placeholder="Senha (mín. 6 caracteres)" />
+    <input id="confirmarSenha" type="password" placeholder="Confirmar senha" />
+
+    <div class="radio-group">
+      <label><input type="radio" name="genero" value="Masculino" /> Masculino</label>
+      <label><input type="radio" name="genero" value="Feminino" /> Feminino</label>
+    </div>
+
+    <select id="faixaEtaria">
+      <option disabled selected>Faixa etária</option>
+      <option>10-19</option>
+      <option>20-29</option>
+      <option>30-39</option>
+      <option>40-49</option>
+      <option>50+</option>
+    </select>
+
+    <select id="estado">
+      <option disabled selected>Estado (UF)</option>
+      <option>SP</option><option>RJ</option><option>MG</option><option>RS</option>
+      <option>BA</option><option>CE</option><option>DF</option><option>PE</option>
+      <option>PR</option><option>SC</option><option>GO</option><option>OUTRO</option>
+    </select>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+    <a href="index.html">Voltar para Login</a>
+  </div>
+
+  <script type="module">
+    import { auth, db, ref, set, createUserWithEmailAndPassword } from './assets/firebase.js';
+
+    window.cadastrar = async function () {
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const senha = document.getElementById("senha").value;
+      const confirmarSenha = document.getElementById("confirmarSenha").value;
+      const genero = document.querySelector("input[name='genero']:checked")?.value;
+      const faixaEtaria = document.getElementById("faixaEtaria").value;
+      const estado = document.getElementById("estado").value;
+
+      if (!nome || !email || !senha || !confirmarSenha || !genero || faixaEtaria === "Faixa etária" || estado === "Estado (UF)") {
+        alert("⚠️ Todos os campos devem ser preenchidos.");
+        return;
+      }
+
+      if (senha.length < 6) {
+        alert("⚠️ A senha deve conter pelo menos 6 caracteres.");
+        return;
+      }
+
+      if (senha !== confirmarSenha) {
+        alert("❌ As senhas não coincidem.");
+        return;
+      }
+
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, senha);
+        const uid = userCredential.user.uid;
+
+        const userData = {
+          nome, email, genero, faixaEtaria, estado
+        };
+
+        await set(ref(db, 'users/' + uid), userData);
+        alert("✅ Cadastro realizado com sucesso!");
+        location.href = "index.html";
+      } catch (error) {
+        alert("❌ Erro ao cadastrar: " + error.message);
+      }
+    };
+  </script>
+</body>
+</html>
