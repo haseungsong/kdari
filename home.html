@@ -177,9 +177,10 @@
   </div>
 
   <div class="card">
-    <h1>Preço</h1>
-    <p>가격</p>
-    <p>Essa roupa está com um preço ótimo.</p>
+    <h1></h1>         <!-- 🔄 단어 -->
+    <p class="rom"></p>  <!-- 🔄 로마자 발음 (신규 추가) -->
+    <p></p>           <!-- 🔄 뜻 -->
+    <p></p>           <!-- 🔄 문장 or 팁 -->
   </div>
 
   <div class="nav-buttons">
@@ -206,7 +207,30 @@
         signOut
       } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
       import { TIP_MAP } from './assets/tipMap.js';
+      
+      // ✅ 로마자 변환 함수 추가
+      function romanize(hangul) {
+        const CHO = ["g", "kk", "n", "d", "tt", "r", "m", "b", "pp", "s", "ss", "", "j", "jj", "ch", "k", "t", "p", "h"];
+        const JUNG = ["a", "ae", "ya", "yae", "eo", "e", "yeo", "ye", "o", "wa", "wae", "oe",
+                      "yo", "u", "wo", "we", "wi", "yu", "eu", "ui", "i"];
+        const JONG = ["", "k", "kk", "ks", "n", "nj", "nh", "t", "l", "lk", "lm", "lb", "ls", "lt", "lp", "lh",
+                      "m", "p", "ps", "t", "t", "ng", "t", "t", "k", "t", "p", "h"];
 
+        let result = "";
+        for (let i = 0; i < hangul.length; i++) {
+          const ch = hangul.charCodeAt(i);
+          if (ch < 0xAC00 || ch > 0xD7A3) {
+            result += hangul[i];
+            continue;
+          }
+          const uniVal = ch - 0xAC00;
+          const cho = Math.floor(uniVal / 588);
+          const jung = Math.floor((uniVal % 588) / 28);
+          const jong = uniVal % 28;
+          result += CHO[cho] + JUNG[jung] + JONG[jong];
+        }
+        return result;
+      }
 
       const categorySelect = document.querySelectorAll("select")[0];
       const groupSelect = document.querySelectorAll("select")[1];
@@ -325,6 +349,26 @@
         currentIndex = (currentIndex + 1) % currentKeys.length;
         showWord();
       });
+
+            // ✅ 페이지 첫 로딩 시 'prática de pronúncia' 선택 자동 트리거
+      window.addEventListener('DOMContentLoaded', () => {
+        categorySelect.dispatchEvent(new Event('change'));
+      });
+      
+
+      // ✅ 단어 카드 업데이트 함수 정의
+      function showWord() {
+        const word = currentKeys[currentIndex];
+        const meaning = currentData[currentGroup][word];
+
+        const romanized = romanize(word);
+        const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
+
+        cardWord.textContent = word;
+        document.querySelector(".rom").textContent = romanized;
+        cardMeaning.textContent = meaning;
+        cardExample.textContent = `💡 Dica: ${tip}`;
+      }
     </script>
 
 </body>
