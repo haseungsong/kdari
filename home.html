@@ -158,11 +158,13 @@
   </div>
 
     <div class="controls">
-    <select>
-      <option>Categoria</option>
+    <select id="categorySelect">
+      <option value="pronuncia">Prática de pronúncia</option>
+      <option value="topik">TOPIK</option>
+      <option value="favoritos">Favoritos</option>
     </select>
 
-    <select>
+    <select id="groupSelect" disabled>
       <option>Grupo</option>
     </select>
 
@@ -205,6 +207,7 @@
       } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
       import { TIP_MAP } from './assets/tipMap.js';
 
+
       const categorySelect = document.querySelectorAll("select")[0];
       const groupSelect = document.querySelectorAll("select")[1];
       const cardWord = document.querySelector(".card h1");
@@ -216,6 +219,60 @@
       let currentKeys = [];
       let currentIndex = 0;
       let currentFile = "";
+
+
+      // 🔄 카테고리에 따라 그룹 목록 자동 설정
+      const groupOptions = {
+        pronuncia: [
+          { value: "단모음", label: "Vogal simples" },
+          { value: "이중모음", label: "Ditongo" },
+          { value: "받침", label: "Consoante final" }
+        ],
+        topik: [
+          { value: "초급", label: "Básico (TOPIK 1)" },
+          { value: "중급", label: "Intermediário (TOPIK 2)" },
+          { value: "고급", label: "Avançado (TOPIK 3+)" }
+        ],
+        favoritos: [
+          { value: "meus", label: "Meus favoritos" }
+        ]
+      };
+
+      categorySelect.addEventListener("change", async () => {
+        const selectedCategory = categorySelect.value;
+
+        // 그룹 드롭다운 초기화
+        groupSelect.innerHTML = "";
+        const options = groupOptions[selectedCategory] || [];
+
+        if (options.length === 0) {
+          groupSelect.disabled = true;
+          return;
+        }
+
+        groupSelect.disabled = false;
+        options.forEach(opt => {
+          const option = document.createElement("option");
+          option.value = opt.value;
+          option.textContent = opt.label;
+          groupSelect.appendChild(option);
+        });
+
+        // 만약 '발음 연습'이면 JSON도 불러옴
+        if (selectedCategory === "pronuncia") {
+          const firstGroupValue = options[0].value;
+          if (firstGroupValue === "단모음") currentFile = "danmoeum.json";
+          else if (firstGroupValue === "이중모음") currentFile = "diphthong.json";
+          else if (firstGroupValue === "받침") currentFile = "batchim.json";
+
+          const res = await fetch(`./assets/${currentFile}`);
+          currentData = await res.json();
+          currentGroup = firstGroupValue;
+          currentKeys = Object.keys(currentData[currentGroup]);
+          currentIndex = 0;
+          showWord();
+        }
+      });
 
       // 🔐 로그인 상태 유지
       onAuthStateChanged(auth, user => {
@@ -232,34 +289,7 @@
         });
       });
 
-      // 📂 카테고리 선택 시 JSON 로드
-      categorySelect.addEventListener("change", async () => {
-        const selected = categorySelect.value;
-        if (selected === "단모음") currentFile = "danmoeum.json";
-        else if (selected === "이중모음") currentFile = "diphthong.json";
-        else if (selected === "받침") currentFile = "batchim.json";
-        else return;
-
-        const res = await fetch(`./assets/${currentFile}`);
-        const json = await res.json();
-        currentData = json;
-
-        // 그룹 드롭다운 초기화
-        groupSelect.innerHTML = "";
-        Object.keys(json).forEach(gr => {
-          const opt = document.createElement("option");
-          opt.value = gr;
-          opt.textContent = gr;
-          groupSelect.appendChild(opt);
-        });
-
-        groupSelect.disabled = false;
-        currentGroup = Object.keys(json)[0];
-        currentKeys = Object.keys(json[currentGroup]);
-        currentIndex = 0;
-        showWord();
-      });
-
+      
       // 📁 그룹 선택 시 단어 목록 갱신
       groupSelect.addEventListener("change", () => {
         currentGroup = groupSelect.value;
