@@ -1,0 +1,86 @@
+{
+  "ㄱ": {
+    "벽": "parede", "국": "sopa", "책": "livro", "닭": "galinha", "부엌": "cozinha",
+    "복": "sorte", "막": "repentinamente", "국물": "caldo", "낙": "queda", "먹다": "comer",
+    "각": "ângulo", "속": "dentro", "박스": "caixa", "목욕": "banho", "빡세다": "intenso",
+    "덮다": "cobrir", "깎다": "cortar", "밝다": "claro", "찍다": "tirar (foto)", "묶다": "amarrar"
+  },
+  "ㄴ": {
+    "산": "montanha", "문": "porta", "반": "metade", "돈": "dinheiro", "눈": "olho/neve",
+    "손": "mão", "언": "palavra", "전": "antes", "친구": "amigo", "신발": "sapato",
+    "한글": "hangeul", "공원": "parque", "민족": "etnia", "간장": "molho de soja", "한복": "hanbok",
+    "훈련": "treinamento", "언덕": "colina", "찬물": "água fria", "신경": "nervo", "천국": "paraíso"
+  },
+  "ㄷ": {
+    "닫다": "fechar", "받다": "receber", "믿다": "acreditar", "앉다": "sentar", "걷다": "andar",
+    "묻다": "perguntar", "쏟다": "derramar", "젖다": "molhar", "얻다": "obter", "헛되다": "vão",
+    "짖다": "latir", "끊다": "cortar", "잇다": "ligar", "쌓다": "empilhar", "짓다": "construir",
+    "넘다": "ultrapassar", "젓다": "mover (com colher)", "짓밟다": "pisar", "갇히다": "ficar preso", "묻히다": "enterrar"
+  },
+  "ㄹ": {
+    "길": "caminho", "달": "lua", "불": "fogo", "물": "água", "칼": "faca",
+    "별": "estrela", "팔": "braço", "열": "febre", "살": "carne", "철": "ferro",
+    "털": "pelo", "발": "pé", "줄": "fila", "홀": "salão", "멀다": "longe",
+    "젊다": "ser jovem", "흘리다": "derramar", "날다": "voar", "닳다": "gastar", "설날": "ano novo lunar"
+  },
+  "ㅁ": {
+    "밤": "noite", "점": "ponto", "솜": "algodão", "곰": "urso", "김": "vapor/alga",
+    "감": "caqui", "꿈": "sonho", "맘": "coração (coloq.)", "검": "espada", "남": "homem/estranho",
+    "염": "sal", "댐": "represa", "혐": "ódio", "맘대로": "como quiser", "틈": "intervalo",
+    "힘": "força", "얌전": "comportado", "얌체": "egoísta", "삶": "vida", "넘": "excesso"
+  },
+  "ㅂ": {
+    "밥": "arroz (cozido)", "입": "boca", "숲": "floresta", "옆": "lado", "곱": "multiplicação",
+    "숍": "loja (shop)", "값": "preço", "잡다": "segurar", "씹다": "mastigar", "눕다": "deitar",
+    "좁다": "estreito", "넓다": "largo", "업다": "carregar nas costas", "쉽다": "fácil", "깁다": "costurar",
+    "엎드리다": "deitar de bruços", "덥다": "quente", "입다": "vestir", "굽다": "assar", "곱다": "bonito"
+  },
+  "ㅅ": {
+    "옷": "roupa", "낫": "foice", "곳": "lugar", "잇": "ligar", "꽃": "flor",
+    "젖": "leite materno", "벗": "amigo", "붓": "pincel", "빗": "pente", "솥": "panela tradicional",
+    "곶": "cabo (geografia)", "삿갓": "chapéu de palha", "잿": "cinza", "샅": "virilha", "혓": "língua (gíria)",
+    "숱": "quantidade (cabelo)", "앗다": "tirar", "뱉다": "cuspir", "잣": "pinhão", "짓": "ato"
+  },
+  "ㅇ": {
+    "방": "quarto", "공": "bola", "중": "meio", "등": "costas/luz", "강": "rio",
+    "숭": "respeito", "왕": "rei", "성": "castelo/sobrenome", "병": "doença", "명": "nome/pessoa",
+    "징": "gong", "탕": "sopa", "렁": "eco", "몽": "sonho", "멍": "roxo/marcado",
+    "숭어": "tainha", "풍": "vento", "형": "irmão mais velho", "종": "sino", "똥": "cocô"
+  },
+  "ㅈ": {
+    "빛": "luz", "깃": "pena (ave)", "낮": "dia", "빚": "dívida", "짓": "ato",
+    "멋": "estilo", "덫": "armadilha", "젖": "molhado", "잊다": "esquecer", "맞다": "correto",
+    "짓다": "construir", "굳다": "endurecer", "닿다": "alcançar", "앉다": "sentar", "묻다": "perguntar",
+    "잦다": "frequente", "짖다": "latir", "찢다": "rasgar", "꽂다": "espetar", "잇다": "ligar"
+  },
+  "ㅊ": {
+    "꽃": "flor", "숯": "carvão", "덧": "extra", "곶": "cabo (geografia)", "샛": "do meio",
+    "밭": "campo", "옻": "laca", "삿갓": "chapéu de palha", "빗": "pente", "끝": "fim",
+    "햇빛": "luz solar", "겉": "superfície", "짙다": "ser escuro", "찻잔": "xícara de chá", "젖다": "molhar",
+    "덧문": "porta extra", "낯": "rosto", "짧다": "curto", "잣": "pinhão", "젖병": "mamadeira"
+  },
+  "ㅋ": {
+    "부엌": "cozinha", "딱": "exatamente", "쑥": "artemísia", "밖": "fora", "깍두기": "kimchi de nabo",
+    "퍽": "bastante", "푹": "profundamente", "쿡": "cutucar", "헉": "oh!", "툭": "de repente",
+    "쏙": "profundamente", "꺽다": "dobrar", "척": "fingimento", "넋": "alma", "쭉": "continuamente",
+    "찍": "tirar (foto)", "퍽퍽": "seco", "빡": "de repente", "쓱": "rapidamente", "팍": "de uma vez"
+  },
+  "ㅌ": {
+    "숯": "carvão", "잇다": "ligar", "붙다": "colar", "겉": "superfície", "앉다": "sentar",
+    "밭": "campo", "솥": "panela tradicional", "맡다": "assumir", "찻집": "casa de chá", "끝": "fim",
+    "샅샅이": "minuciosamente", "겹겹이": "em camadas", "팥": "feijão vermelho", "덧붙이다": "acrescentar", "잣나무": "pinheiro",
+    "햇빛": "luz do sol", "훑다": "varrer", "젖다": "molhar", "웃다": "rir", "곁": "lado"
+  },
+  "ㅍ": {
+    "앞": "frente", "숲": "floresta", "잎": "folha", "덮다": "cobrir", "깊다": "profundo",
+    "굽다": "assar", "접다": "dobrar", "쉽다": "fácil", "높다": "alto", "넓다": "largo",
+    "곱다": "bonito", "깁다": "costurar", "밉다": "feio", "씹다": "mastigar", "입다": "vestir",
+    "엎다": "virar", "덥다": "quente", "눕다": "deitar", "굳다": "endurecer", "좁다": "estreito"
+  },
+  "ㅎ": {
+    "꽃잎": "pétala", "낳다": "dar à luz", "쌓다": "empilhar", "좋다": "bom", "싫다": "odiar",
+    "많다": "muito", "잊다": "esquecer", "묻다": "perguntar", "닿다": "alcançar", "놓다": "colocar",
+    "닿지 않다": "não alcançar", "낳지 않다": "não dar à luz", "묻히다": "ser enterrado", "놓치다": "perder",
+    "앓다": "adoecer", "쌓이다": "acumular", "괜찮다": "estar bem", "쏟다": "derramar", "헛되다": "em vão", "뱉다": "cuspir"
+  }
+}
