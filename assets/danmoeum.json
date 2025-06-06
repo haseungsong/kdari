@@ -1,5 +1,4 @@
 {
-  "ㅏ": {
     "사과": "maçã", "가방": "bolsa", "바람": "vento", "사람": "pessoa", "자전거": "bicicleta",
     "바지": "calça", "카메라": "câmera", "사자": "leão", "가게": "loja", "다리": "perna",
     "마당": "quintal", "자두": "ameixa", "사랑": "amor", "마법": "mágica", "다음": "próximo",
@@ -9,8 +8,6 @@
     "사이": "entre", "사이코": "psicopata", "아기": "bebê", "아빠": "papai", "자기": "si mesmo",
     "자라다": "crescer", "자유": "liberdade", "카드": "cartão", "파도": "onda", "하마": "hipopótamo",
     "바다": "mar", "나무": "árvore", "가수": "cantor(a)", "바위": "rocha", "마루": "assoalho","다이아": "diamante"
-  },
-  "ㅑ": {
     "야채": "vegetais", "야구": "beisebol", "야경": "paisagem noturna", "야자수": "palmeira", "야옹": "miau",
     "야외": "ao ar livre", "야망": "ambição", "야간": "noturno", "야시장": "feira noturna", "야영": "acampamento",
     "야식": "lanche noturno", "야단": "bronca", "야생": "selvagem", "야수": "fera", "야자": "palmeira",
@@ -21,8 +18,6 @@
     "야외데이트": "encontro ao ar livre", "야외카페": "cafeteria ao ar livre",
     "샤워": "banho", "샤프": "lapiseira", "샤이니": "SHINee (grupo)", "샤브샤브": "shabu-shabu", "샤오미": "Xiaomi",
     "샤이": "tímido", "챠트": "ranking", "챠우": "chau (tchau)", "챠지": "charge"
-  },
-  "ㅓ": {
     "거울": "espelho", "저녁": "jantar", "버섯": "cogumelo", "서랍": "gaveta", "번호": "número",
     "거북이": "tartaruga", "머슴": "servo", "먹이": "comida (animal)", "여자친구": "namorada", "여행": "viagem",
     "여우": "raposa", "여권": "passaporte", "여유": "tempo livre", "여름": "verão", "여동생": "irmã mais nova",
@@ -30,8 +25,6 @@
     "서류": "documento", "거지": "mendigo", "거미": "aranha", "서비스": "serviço", "서예": "caligrafia",
     "머스타드": "mostarda", "머리띠": "tiara", "거치대": "suporte", "저자": "autor", "거주": "residência",
     "저리": "ali (forma informal)", "저리다": "formigar", "저기요": "com licença", "저기": "ali", "저수지": "reservatório"
-  },
-  "ㅕ": {
     "겨울": "inverno", "혀": "língua", "여기": "aqui", "여태": "até agora", "여전": "ainda",
     "여기저기": "em todo lugar", "여진": "tremor secundário", "여우비": "chuva de sol", "여성": "mulher", "여행사": "agência de viagens",
     "여론": "opinião pública", "여보": "querido(a)", "여권사진": "foto do passaporte", "여의도": "Yeouido (bairro)", "여직원": "funcionária",
@@ -40,16 +33,12 @@
     "여배우": "atriz", "여대": "universidade feminina", "여시": "raposa fêmea", "여수": "Yeosu (cidade)", "여야": "governo e oposição",
     "여의사": "médica", "겨자": "mostarda", "겨울옷": "roupa de inverno", "며칠": "quantos dias", "며느리": "nora", "벼룩": "pulga",
     "셔츠": "camisa", "처방": "prescrição médica", "처벌": "punição"
-  },
-  "ㅗ": {
     "고기": "carne", "모자": "boné", "도로": "estrada", "소리": "som", "호수": "lago",
     "토끼": "coelho", "고래": "baleia", "포도": "uva", "오리": "pato", "오빠": "irmão mais velho",
     "로봇": "robô", "보라": "roxo", "모두": "todos", "소문": "rumor", "조개": "molusco",
     "노래": "música", "도토리": "bolota", "노트": "caderno", "초코": "chocolate", "모기": "mosquito",
     "모래": "areia", "도마": "tábua de corte", "토마토": "tomate", "도시": "cidade", "로비": "saguão",
     "도깨비": "duende coreano", "호루라기": "apito", "모교": "escola de origem", "모터": "motor", "로또": "loteria", "포스터": "pôster", "노화": "envelhecimento"
-  },
-  "ㅛ": {
     "요리": "culinária", "요가": "yoga", "요금": "tarifa", "요정": "fada", "요요": "iô-iô",
     "요새": "recentemente", "요원": "agente", "요술": "mágica", "요청": "pedido", "요람": "berço",
     "요리사": "cozinheiro(a)", "요일": "dia da semana", "요점": "ponto principal", "요즘": "ultimamente", "요트": "iate",
@@ -59,8 +48,6 @@
     "묘수": "jogada genial", "묘기": "acrobacia", "쇼파": "sofá", "쇼호스트": "apresentador de compras", "쇼케이스": "vitrine",
     "교내": "dentro da escola", "교회": "igreja", "교가": "hino escolar", "교표": "emblema da escola", "교시": "período de aula",
     "교제": "relacionamento", "묘지기": "zelador de cemitério", "묘소": "sepultura", "묘의": "enterro", "쇼무대": "palco de apresentação"
-  },
-  "ㅜ": {
     "우산": "guarda-chuva", "우유": "leite", "구름": "nuvem", "수박": "melancia", "두부": "tofu",
     "부엌": "cozinha", "주먹": "punho", "주스": "suco", "후추": "pimenta", "무릎": "joelho",
     "부자": "rico", "주인": "dono", "우정": "amizade", "부족": "falta", "주말": "fim de semana",
@@ -68,8 +55,6 @@
     "무대": "palco", "구이": "grelhado", "주유소": "posto de gasolina", "수레": "carroça", "부모": "pais",
     "우비": "capa de chuva", "수도": "capital / água encanada", "주차": "estacionamento", "구조": "resgate / estrutura", "주교": "bispo",
     "부채": "leque"
-  },
-  "ㅠ": {
     "유리": "vidro", "유명하다": "ser famoso", "유학": "estudo no exterior", "유학생": "estudante internacional", "유치원": "jardim de infância",
     "유전자": "gene", "유산": "herança", "유리창": "janela de vidro", "유모차": "carrinho de bebê", "유쾌하다": "ser alegre",
     "유통": "distribuição", "유지하다": "manter", "유능하다": "ser competente", "유료": "pago", "유머": "humor",
@@ -81,14 +66,10 @@
     "규모": "tamanho", "규리": "Gyuri (nome)", "규민": "Gyumin (nome)", "규리네": "na casa da Gyuri", "규모화": "expansão",
     "뉴욕": "Nova Iorque", "뉴런": "neurônio", "듀오": "dupla", "듀엣": "dueto", "뷰티": "beleza",
     "큐브": "cubo", "큐피드": "Cupido", "튜브": "tubo", "퓨마": "puma", "쥬스": "suco"
-  },
-  "ㅡ": {
     "으르렁": "rosnado", "으깨다": "amassar", "은행": "banco", "으슬으슬": "arrepios", "으쓱": "encolher ombros",
     "으뜸": "o melhor", "으슥하다": "isolado", "으쓱거리다": "orgulhoso", "으악": "argh", "음식": "comida",
     "음악": "música", "음료수": "bebida", "의사": "médico", "의무": "obrigação",
     "응원": "torcida", "의심": "suspeita", "음성": "voz", "응급": "emergência"
-  },
-  "ㅣ": {
     "이름": "nome", "이미지": "imagem", "이발소": "barbearia", "이웃": "vizinho", "이불": "cobertor",
     "이유": "razão", "이슬": "orvalho", "이상하다": "estranho", "기차": "trem", "비누": "sabão",
     "시장": "mercado", "미소": "sorriso", "미역국": "sopa de algas", "치킨": "frango frito", "비빔밥": "bibimbap",
@@ -97,5 +78,4 @@
     "미용실": "salão de beleza", "미술": "arte", "미세먼지": "poeira fina", "미팅": "reunião/encontro", "미디어": "mídia",
     "비행기": "avião", "비서": "secretária", "비율": "proporção", "비용": "custo", "비교": "comparação",
     "치마": "saia", "치약": "pasta de dente", "치료": "tratamento", "치즈": "queijo", "치열": "intensidade"
-  }
 }
