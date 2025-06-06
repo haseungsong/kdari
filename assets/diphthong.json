@@ -1,5 +1,4 @@
 {
-  "ㅐ": {
     "개": "cachorro", "배": "barco", "내일": "amanhã",
     "대문": "portão", "매일": "todo dia", "예약": "reserva", "재미": "diversão", "대표": "representante",
     "해결": "solução", "깨끗하다": "ser limpo", "냄새": "cheiro", "택시": "táxi",
@@ -10,9 +9,7 @@
     "배우자": "cônjuge", "배치": "disposição", "배포": "distribuição", "새로": "novamente", "새우": "camarão",
     "내외": "marido e esposa", "대의": "representação", "배기": "escape (automotivo)", "배수": "drenagem", "재빠르다": "ser ágil",
     "재주": "talento", "재치": "esperteza", "해도": "mesmo assim", "패거리": "bando", "패러디": "paródia",
-    "패스": "passar", "패자": "perdedor", "패치": "remendo / patch"
-  },
-  "ㅔ": {
+    "패스": "passar", "패자": "perdedor", "패치": "remendo / patch",
     "에어컨": "ar-condicionado", "에너지": "energia", "에러": "erro", "엔진": "motor", "엘리베이터": "elevador",
     "엑셀": "Excel", "레스토랑": "restaurante", "데이터": "dados", "메뉴": "menu", "베개": "travesseiro",
     "세수": "lavar o rosto", "제안": "proposta", "헤어짐": "separação", "케이크": "bolo", "게임": "jogo",
@@ -21,26 +18,20 @@
     "에디터": "editor(a)", "제비": "andorinha", "베이스": "baixo (instrumento)", "에이즈": "AIDS", "세차": "lavagem de carro",
     "게으르다": "ser preguiçoso", "세수대야": "bacia de lavar o rosto", "제자": "discípulo", "제자리": "mesmo lugar", "제사": "ritual ancestral",
     "제자도": "discipulado", "에이치비오": "HBO", "페루": "Peru", "케미": "química (entre pessoas)", "레시피": "receita",
-    "레터": "carta", "제네바": "Genebra"
-  },
-  "ㅚ": {
+    "레터": "carta", "제네바": "Genebra",
     "뇌": "cérebro", "회": "sashimi", "외국": "país estrangeiro", "외출": "saída", "교회": "igreja",
     "최고": "o melhor", "회사": "empresa", "외모": "aparência", "외롭다": "sentir-se só", "외삼촌": "tio materno",
     "외국인": "estrangeiro", "외국어": "língua estrangeira", "회장": "presidente", "괴물": "monstro",
     "괴롭다": "doloroso", "교외": "subúrbio", "되다": "tornar-se",
     "되새기다": "relembrar", "괴짜": "excêntrico", "괴기": "bizarro", "괴이하다": "estranho", "퇴사": "deixar o emprego",
     "회비": "mensalidade", "회화": "conversa / pintura", "회수": "recolhimento", "회계": "contabilidade",
-    "회로": "circuito", "회고": "retrospectiva", "회기": "sessão (período oficial)", "되묘하다": "ser reestranho", "되비치다": "refletir de volta"
-  },
-  "ㅟ": {
+    "회로": "circuito", "회고": "retrospectiva", "회기": "sessão (período oficial)", "되묘하다": "ser reestranho", "되비치다": "refletir de volta",
     "위": "cima", "귀": "orelha", "뒤": "atrás", "쥐": "rato", "취미": "hobby",
     "귀엽다": "fofo", "위험": "perigo", "의미": "significado", "회의": "reunião", "취업": "emprego",
     "위생": "higiene", "뒤늦다": "tardio", "취소": "cancelar", "쥐소리": "guincho de rato", "귀국": "retorno ao país",
     "위치": "localização", "귀가": "retorno para casa", "취재": "cobertura jornalística", "뒤척이다": "virar-se (na cama)",
     "위기": "crise", "위주": "centrado em", "위대하다": "ser grandioso", "위조": "falsificação", "취기": "embriaguez", "취사": "cozinhar",
-    "위로": "conforto", "귀의": "retorno à fé", "취지": "propósito"
-  },
-  "ㅖ": {
+    "위로": "conforto", "귀의": "retorno à fé", "취지": "propósito",
     "예": "exemplo", "예쁘다": "bonito", "예약": "reserva", "예술": "arte", "예배": "culto",
     "예상": "previsão", "예언": "profecia", "예문": "frase exemplo", "예절": "etiqueta", "예비": "preparação",
     "예감": "pressentimento", "예측": "previsão", "예능": "entretenimento", "예전": "antigamente", "예비군": "reserva militar",
@@ -48,9 +39,7 @@
     "예고": "aviso prévio", "예비부부": "casal noivo", "예배자": "adorador",
     "계기": "instrumento / oportunidade", "계좌": "conta bancária", "폐지": "revogação / abolição", "세례": "batismo",
     "계류": "estar pendente", "계시": "revelação", "계교": "ponte de planos", "계보": "linhagem", "계사": "empresa de galinhas",
-    "폐기": "descartar", "폐차": "carro desativado", "폐교": "escola fechada", "세례자": "batizante"
-  },
-  "ㅘ": {
+    "폐기": "descartar", "폐차": "carro desativado", "폐교": "escola fechada", "세례자": "batizante",
     "사과": "maçã", "과일": "fruta", "완전": "completo", "화장실": "banheiro", "과자": "biscoito",
     "화요일": "terça-feira", "과학": "ciência", "괜찮다": "tudo bem", "화가": "pintor", "왕관": "coroa",
     "환영": "boas-vindas", "화염": "chama", "완료": "conclusão", "과목": "disciplina", "광고": "propaganda",
@@ -59,39 +48,30 @@
     "과로": "sobrecarga de trabalho", "과제": "tarefa", "과오": "erro", "과부하": "sobrecarga", "화해하다": "reconciliar-se", "화가나다": "ficar bravo",
     "와이파이": "Wi-Fi", "와사비": "wasabi", "와이셔츠": "camisa social", "와디즈": "Wadiz (plataforma)", "콰이어": "coro",
     "와이어": "fio / arame", "와트": "watt", "콰이어트": "quiet (quieto)",
-    "와사비마요": "maionese de wasabi", "와이드": "largo / wide", "와우": "uau"
-  },
-  "ㅝ": {
+    "와사비마요": "maionese de wasabi", "와이드": "largo / wide", "와우": "uau",
     "워커": "bota", "워치": "relógio", "워치리스트": "lista de observação",
     "워프": "distorção (warp)", "워크": "caminhada / walk", "워터": "água (water)",
     "원숭이": "macaco", "권리": "direito", "원인": "causa", "워터파크": "parque aquático", "워낙": "demais",
     "주원": "nome próprio", "무조건": "incondicionalmente", "권투": "boxe", "원하다": "desejar", "월급": "salário",
     "월요일": "segunda-feira", "원피스": "vestido", "원형": "forma original", "권위": "autoridade", "월말": "fim do mês",
-    "권유": "recomendação", "워드": "Word", "월세": "aluguel mensal", "원서": "formulário", "원자": "átomo"
-  },
-  "ㅙ": {
+    "권유": "recomendação", "워드": "Word", "월세": "aluguel mensal", "원서": "formulário", "원자": "átomo",
     "왜": "por que", "돼지": "porco", "회사원": "funcionário", "왜곡": "distorção", "괘종시계": "relógio de parede",
     "되게": "muito", "외래어": "palavra estrangeira", "되다": "tornar-se", "왜냐하면": "porque", "되풀이": "repetição",
     "되돌리다": "reverter", "돼지고기": "carne de porco", "되찾다": "recuperar", "왜소하다": "pequeno", "회화": "conversa",
     "쾌유": "recuperação", "쾌재": "boa notícia", "쾌도": "espada afiada", "쾌조": "excelente condição", "쾌투": "arremesso vigoroso", "쾌거": "grande conquista",
     "쾌활하다": "ser animado", "왜곡되다": "ser distorcido", "되게 많다": "ter demais", "되돌아가다": "voltar", "돼지꿈": "sonho de porco (prosperidade)",
-    "돼지우리": "chiqueiro", "왜가리": "garça-real", "왜구": "pirata japonês (histórico)", "돼지코": "nariz de porco", "쾌유되다": "recuperar-se bem", "쾌차": "melhorar (saúde)"
-  },
-  "ㅞ": {
+    "돼지우리": "chiqueiro", "왜가리": "garça-real", "왜구": "pirata japonês (histórico)", "돼지코": "nariz de porco", "쾌유되다": "recuperar-se bem", "쾌차": "melhorar (saúde)",
     "웨이터": "garçom", "웨딩드레스": "vestido de noiva", "웹사이트": "site", "웹툰": "webtoon", "웨딩": "casamento",
     "웨이브": "ondulação", "웨이크업": "acordar", "웨이트": "peso", "웨이팅": "espera", "웨하스": "wafer",
     "웨이브펌": "permanente ondulada", "웨딩홀": "salão de casamento", "웹디자이너": "designer de web", "웹개발자": "desenvolvedor web",
     "웨이브캠": "webcam", "웹소설": "novela web", "웹주소": "endereço da web", "웨스트": "oeste", "웨지감자": "batata wedge", "웹강의": "aula online",
     "웨이브기계": "máquina de ondas (cabelo)", "웨이트리스": "garçonete", "웨이크보드": "wakeboard", "웨이크파크": "parque de wakeboard",
     "궤도": "órbita / trilho", "쉐이크": "milkshake", "쉐프": "chef",
-    "쉐도우": "sombra (makeup)", "퀘스트": "missão (game)"
-  },
-  "ㅢ": {
+    "쉐도우": "sombra (makeup)", "퀘스트": "missão (game)",
     "의자": "cadeira", "의사": "médico", "의무": "obrigação", "의도": "intenção", "의류": "vestuário",
     "의심": "suspeita", "의미": "significado", "의견": "opinião", "의지": "vontade", "의문": "dúvida",
     "의식": "consciência", "의식주": "necessidades básicas", "의학": "medicina", "의회": "congresso", "의상": "traje",
     "의식하다": "estar consciente", "의외": "inesperado", "의존": "dependência", "의욕": "motivação", "의리": "lealdade",
     "긔여워": "fofinho (forma antiga de 귀여워)", "늬우치다": "arrepender-se (arcaico)",
-    "의대": "faculdade de medicina", "의료": "serviço médico", "의거": "ato de justiça", "의가사": "música patriótica"
-  }
+    "의대": "faculdade de medicina", "의료": "serviço médico", "의거": "ato de justiça", "의가사": "música patriótica",
 }
