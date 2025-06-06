@@ -325,7 +325,7 @@
           currentData = await res.json();
         }
 
-        currentKeys = Object.keys(currentData[currentGroup]);
+        currentKeys = Object.keys(currentData);
         currentIndex = 0;
         showWord();
       });
@@ -357,22 +357,17 @@
       // ✅ 단어 카드 업데이트 함수 정의
       function showWord() {
         const word = currentKeys[currentIndex];
-        const meaning = currentData[word];
+        const meaning = currentData[word];  // ✅ 직접 뜻이 들어있음
 
         const romanized = romanize(word);
         const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
-        
-        console.log("✅ word:", word);
-        console.log("✅ meaning:", meaning);
-        console.log("✅ currentGroup:", currentGroup);
-        console.log("✅ currentFile:", currentFile);
-        console.log("✅ TIP:", tip);
 
-        cardWord.textContent = word || "⚠️ 단어 없음";
+        cardWord.textContent = word;
         document.querySelector(".rom").textContent = romanized;
         cardMeaning.textContent = meaning || "⚠️ 뜻 없음";
         cardExample.textContent = `💡 Dica: ${tip}`;
       }
+
     </script>
 
 </body>
