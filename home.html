@@ -355,20 +355,30 @@
       });
       
 
-      // ✅ 단어 카드 업데이트 함수 정의
-      function showWord() {
-        const word = currentKeys[currentIndex];
-        const meaning = currentData[word];
-        const romanized = romanize(word);
+    function showWord() {
+      const word = currentKeys[currentIndex];
+      const meaning = currentData[word];
+      const romanized = romanize(word);
 
-        cardWord.textContent = word;
-        document.querySelector(".rom").textContent = romanized;
-        cardMeaning.textContent = meaning || "⚠️ 뜻 없음";
-        cardExample.textContent = "";  // 현재는 문장이나 팁이 없으므로 빈값
+      // ✅ 첫 글자의 유니코드에서 초·중·종 분리
+      const chCode = word.charCodeAt(0) - 0xAC00;
+      const jungIndex = Math.floor((chCode % 588) / 28);
+      const JUNG_LIST = ["ㅏ","ㅐ","ㅑ","ㅒ","ㅓ","ㅔ","ㅕ","ㅖ","ㅗ","ㅘ","ㅙ","ㅚ","ㅛ","ㅜ","ㅝ","ㅞ","ㅟ","ㅠ","ㅡ","ㅢ","ㅣ"];
+      const firstJung = JUNG_LIST[jungIndex];
 
-        console.log("✅ word:", word);
-        console.log("✅ meaning:", meaning);
-      }
+      // ✅ 팁 가져오기 (파일명 → 모음)
+      const tip = TIP_MAP?.[currentFile]?.[firstJung] || "";
+
+      // 카드 표시
+      cardWord.textContent = word;
+      document.querySelector(".rom").textContent = romanized;
+      cardMeaning.textContent = meaning || "⚠️ 뜻 없음";
+      cardExample.textContent = tip;
+
+      console.log("✅ word:", word);
+      console.log("✅ 모음:", firstJung);
+      console.log("✅ tip:", tip);
+    }
 
     </script>
 
