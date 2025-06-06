@@ -363,10 +363,16 @@
 
         const romanized = romanize(word);
         const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
+        
+        console.log("✅ word:", word);
+        console.log("✅ meaning:", meaning);
+        console.log("✅ currentGroup:", currentGroup);
+        console.log("✅ currentFile:", currentFile);
+        console.log("✅ TIP:", tip);
 
-        cardWord.textContent = word;
+        cardWord.textContent = word || "⚠️ 단어 없음";
         document.querySelector(".rom").textContent = romanized;
-        cardMeaning.textContent = meaning;
+        cardMeaning.textContent = meaning || "⚠️ 뜻 없음";
         cardExample.textContent = `💡 Dica: ${tip}`;
       }
     </script>
