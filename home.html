@@ -318,9 +318,13 @@
         currentGroup = groupSelect.value;
 
         if (categorySelect.value === "pronuncia") {
-          if (currentGroup === "단모음") currentFile = "danmoeum.json";
-          else if (currentGroup === "이중모음") currentFile = "diphthong.json";
-          else if (currentGroup === "받침") currentFile = "batchim.json";
+          const groupToFileMap = {
+            "단모음": "danmoeum.json",
+            "이중모음": "diphthong.json",
+            "받침": "batchim.json"
+          };
+
+          currentFile = groupToFileMap[currentGroup];
 
           const res = await fetch(`./assets/${currentFile}`);
           currentData = await res.json();
