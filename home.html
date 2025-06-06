@@ -235,8 +235,8 @@
       const categorySelect = document.querySelectorAll("select")[0];
       const groupSelect = document.querySelectorAll("select")[1];
       const cardWord = document.querySelector(".card h1");
-      const cardMeaning = document.querySelector(".card p:nth-of-type(1)");
-      const cardExample = document.querySelector(".card p:nth-of-type(2)");
+      const cardMeaning = document.querySelector(".card p:nth-of-type(2)");
+      const cardExample = document.querySelector(".card p:nth-of-type(3)");
 
       let currentData = {};
       let currentGroup = "";
@@ -289,10 +289,10 @@
           else if (firstGroupValue === "이중모음") currentFile = "diphthong.json";
           else if (firstGroupValue === "받침") currentFile = "batchim.json";
 
-          const res = await fetch(`./assets/${currentFile}`);
+          const res = await fetch(`/kdari/assets/${currentFile}`);
           currentData = await res.json();
           currentGroup = firstGroupValue;
-          currentKeys = Object.keys(currentData[currentGroup]);
+          currentKeys = Object.keys(currentData);
           currentIndex = 0;
           showWord();
         }
@@ -359,7 +359,7 @@
       // ✅ 단어 카드 업데이트 함수 정의
       function showWord() {
         const word = currentKeys[currentIndex];
-        const meaning = currentData[currentGroup][word];
+        const meaning = currentData[word];
 
         const romanized = romanize(word);
         const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
