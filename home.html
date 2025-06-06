@@ -291,23 +291,22 @@
 
       
       // 📁 그룹 선택 시 단어 목록 갱신
-      groupSelect.addEventListener("change", () => {
+      groupSelect.addEventListener("change", async () => {
         currentGroup = groupSelect.value;
+
+        if (categorySelect.value === "pronuncia") {
+          if (currentGroup === "단모음") currentFile = "danmoeum.json";
+          else if (currentGroup === "이중모음") currentFile = "diphthong.json";
+          else if (currentGroup === "받침") currentFile = "batchim.json";
+
+          const res = await fetch(`./assets/${currentFile}`);
+          currentData = await res.json();
+        }
+
         currentKeys = Object.keys(currentData[currentGroup]);
         currentIndex = 0;
         showWord();
       });
-
-      // 📖 단어 보여주기
-      function showWord() {
-        const word = currentKeys[currentIndex];
-        const meaning = currentData[currentGroup][word];
-        const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
-
-        cardWord.textContent = word;
-        cardMeaning.textContent = meaning;
-        cardExample.textContent = `Grupo: ${currentGroup} | 💡 Dica: ${tip}`;
-      }
 
       // ⬅ 이전
       document.querySelector(".nav-buttons button:first-child").addEventListener("click", () => {
