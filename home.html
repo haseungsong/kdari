@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K-Dari Home</title>
+  <link rel="stylesheet" href="assets/styles.css" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -141,6 +142,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -155,7 +157,7 @@
     <button>K-pop</button>
   </div>
 
-  <div class="controls">
+    <div class="controls">
     <select>
       <option>Categoria</option>
     </select>
@@ -195,27 +197,106 @@
     Os dados serão carregados via JSON em breve.
   </div>
 
-  <script type="module">
-    import { auth } from './assets/firebase.js';
-    import {
-      onAuthStateChanged,
-      signOut
-    } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+    <script type="module">
+      import { auth } from './assets/firebase.js';
+      import {
+        onAuthStateChanged,
+        signOut
+      } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+      import { TIP_MAP } from './assets/tipMap.js';
 
-    onAuthStateChanged(auth, user => {
-      if (user) {
-        document.getElementById("userEmail").textContent = "Usuário: " + user.email;
-      } else {
-        location.href = "index.html";
-      }
-    });
+      const categorySelect = document.querySelectorAll("select")[0];
+      const groupSelect = document.querySelectorAll("select")[1];
+      const cardWord = document.querySelector(".card h1");
+      const cardMeaning = document.querySelector(".card p:nth-of-type(1)");
+      const cardExample = document.querySelector(".card p:nth-of-type(2)");
 
-    document.getElementById("logoutBtn").addEventListener("click", () => {
-      signOut(auth).then(() => {
-        location.href = "index.html";
+      let currentData = {};
+      let currentGroup = "";
+      let currentKeys = [];
+      let currentIndex = 0;
+      let currentFile = "";
+
+      // 🔐 로그인 상태 유지
+      onAuthStateChanged(auth, user => {
+        if (user) {
+          document.getElementById("userEmail").textContent = "Usuário: " + user.email;
+        } else {
+          location.href = "index.html";
+        }
       });
-    });
-  </script>
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        signOut(auth).then(() => {
+          location.href = "index.html";
+        });
+      });
+
+      // 📂 카테고리 선택 시 JSON 로드
+      categorySelect.addEventListener("change", async () => {
+        const selected = categorySelect.value;
+        if (selected === "단모음") currentFile = "danmoeum.json";
+        else if (selected === "이중모음") currentFile = "diphthong.json";
+        else if (selected === "받침") currentFile = "batchim.json";
+        else return;
+
+        const res = await fetch(`./assets/${currentFile}`);
+        const json = await res.json();
+        currentData = json;
+
+        // 그룹 드롭다운 초기화
+        groupSelect.innerHTML = "";
+        Object.keys(json).forEach(gr => {
+          const opt = document.createElement("option");
+          opt.value = gr;
+          opt.textContent = gr;
+          groupSelect.appendChild(opt);
+        });
+
+        groupSelect.disabled = false;
+        currentGroup = Object.keys(json)[0];
+        currentKeys = Object.keys(json[currentGroup]);
+        currentIndex = 0;
+        showWord();
+      });
+
+      // 📁 그룹 선택 시 단어 목록 갱신
+      groupSelect.addEventListener("change", () => {
+        currentGroup = groupSelect.value;
+        currentKeys = Object.keys(currentData[currentGroup]);
+        currentIndex = 0;
+        showWord();
+      });
+
+      // 📖 단어 보여주기
+      function showWord() {
+        const word = currentKeys[currentIndex];
+        const meaning = currentData[currentGroup][word];
+        const tip = TIP_MAP[currentFile]?.[currentGroup] || "";
+
+        cardWord.textContent = word;
+        cardMeaning.textContent = meaning;
+        cardExample.textContent = `Grupo: ${currentGroup} | 💡 Dica: ${tip}`;
+      }
+
+      // ⬅ 이전
+      document.querySelector(".nav-buttons button:first-child").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + currentKeys.length) % currentKeys.length;
+        showWord();
+      });
+
+      // 🔀 랜덤
+      document.querySelector(".nav-buttons button:nth-child(2)").addEventListener("click", () => {
+        currentIndex = Math.floor(Math.random() * currentKeys.length);
+        showWord();
+      });
+
+      // ➡ 다음
+      document.querySelector(".nav-buttons button:last-child").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % currentKeys.length;
+        showWord();
+      });
+    </script>
 
 </body>
 </html>
