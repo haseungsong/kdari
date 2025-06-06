@@ -7,7 +7,7 @@
     "나라": "país", "다리미": "ferro de passar", "마녀": "bruxa", "마시마로": "Mashimaro", "바보": "bobo",
     "사이": "entre", "사이코": "psicopata", "아기": "bebê", "아빠": "papai", "자기": "si mesmo",
     "자라다": "crescer", "자유": "liberdade", "카드": "cartão", "파도": "onda", "하마": "hipopótamo",
-    "바다": "mar", "나무": "árvore", "가수": "cantor(a)", "바위": "rocha", "마루": "assoalho","다이아": "diamante"
+    "바다": "mar", "나무": "árvore", "가수": "cantor(a)", "바위": "rocha", "마루": "assoalho","다이아": "diamante",
     "야채": "vegetais", "야구": "beisebol", "야경": "paisagem noturna", "야자수": "palmeira", "야옹": "miau",
     "야외": "ao ar livre", "야망": "ambição", "야간": "noturno", "야시장": "feira noturna", "야영": "acampamento",
     "야식": "lanche noturno", "야단": "bronca", "야생": "selvagem", "야수": "fera", "야자": "palmeira",
@@ -17,7 +17,7 @@
     "야외활동": "atividade ao ar livre", "야외수업": "aula ao ar livre", "야경투어": "passeio noturno turístico", "야광": "brilho no escuro", "야외공연": "apresentação ao ar livre",
     "야외데이트": "encontro ao ar livre", "야외카페": "cafeteria ao ar livre",
     "샤워": "banho", "샤프": "lapiseira", "샤이니": "SHINee (grupo)", "샤브샤브": "shabu-shabu", "샤오미": "Xiaomi",
-    "샤이": "tímido", "챠트": "ranking", "챠우": "chau (tchau)", "챠지": "charge"
+    "샤이": "tímido", "챠트": "ranking", "챠우": "chau (tchau)", "챠지": "charge",
     "거울": "espelho", "저녁": "jantar", "버섯": "cogumelo", "서랍": "gaveta", "번호": "número",
     "거북이": "tartaruga", "머슴": "servo", "먹이": "comida (animal)", "여자친구": "namorada", "여행": "viagem",
     "여우": "raposa", "여권": "passaporte", "여유": "tempo livre", "여름": "verão", "여동생": "irmã mais nova",
@@ -32,7 +32,7 @@
     "여자": "mulher", "여기서": "aqui (neste lugar)", "여차": "em tal situação", "여의": "Yeoui (nome)", "여비": "despesas de viagem",
     "여배우": "atriz", "여대": "universidade feminina", "여시": "raposa fêmea", "여수": "Yeosu (cidade)", "여야": "governo e oposição",
     "여의사": "médica", "겨자": "mostarda", "겨울옷": "roupa de inverno", "며칠": "quantos dias", "며느리": "nora", "벼룩": "pulga",
-    "셔츠": "camisa", "처방": "prescrição médica", "처벌": "punição"
+    "셔츠": "camisa", "처방": "prescrição médica", "처벌": "punição",
     "고기": "carne", "모자": "boné", "도로": "estrada", "소리": "som", "호수": "lago",
     "토끼": "coelho", "고래": "baleia", "포도": "uva", "오리": "pato", "오빠": "irmão mais velho",
     "로봇": "robô", "보라": "roxo", "모두": "todos", "소문": "rumor", "조개": "molusco",
@@ -54,7 +54,7 @@
     "부탁": "pedido", "구두": "sapato", "부서": "departamento", "주사": "injeção", "우체국": "correio",
     "무대": "palco", "구이": "grelhado", "주유소": "posto de gasolina", "수레": "carroça", "부모": "pais",
     "우비": "capa de chuva", "수도": "capital / água encanada", "주차": "estacionamento", "구조": "resgate / estrutura", "주교": "bispo",
-    "부채": "leque"
+    "부채": "leque",
     "유리": "vidro", "유명하다": "ser famoso", "유학": "estudo no exterior", "유학생": "estudante internacional", "유치원": "jardim de infância",
     "유전자": "gene", "유산": "herança", "유리창": "janela de vidro", "유모차": "carrinho de bebê", "유쾌하다": "ser alegre",
     "유통": "distribuição", "유지하다": "manter", "유능하다": "ser competente", "유료": "pago", "유머": "humor",
